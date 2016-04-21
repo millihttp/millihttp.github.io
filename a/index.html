@@ -2,9 +2,13 @@
 <script>
 function changeTitle() {
   var title = $(document).prop('title'); 
-  if (title.indexOf('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>') == -1) {
+  if (title.indexOf('FOO') == -1) {
     setTimeout(changeTitle, 300);  
-    $(document).prop('title', '>'+title);
+    $(document).prop('title', 'FOO ' + title);
+  }
+  else {
+    setTimeout(changeTitle, 300);  
+    $(document).prop('title', 'BAR ' + title);
   }
 }
 
