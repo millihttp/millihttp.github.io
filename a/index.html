@@ -1,17 +1,13 @@
-<html><head><title>Testing</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script></head><body><h1>Secure!</h1>
+<html><head><title>Testing BAR</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script></head><body><h1>Secure!</h1>
 <script>
-function changeTitle() {
-  var title = $(document).prop('title'); 
-  if (title.indexOf('FOO') == -1) {
-    setTimeout(changeTitle, 300);  
-    $(document).prop('title', 'FOO');
-  }
-  else {
-    setTimeout(changeTitle, 300);  
-    $(document).prop('title', 'BAR');
-  }
-}
+var counter = 0;
 
-changeTitle();
+var titleTimerId = setInterval(function(){
+    document.title = document.title + ' >';
+    counter++;
+    if(counter == 5){
+        clearInterval(titleTimerId);
+    }
+}, 100);
 </script>
 </body></html>
