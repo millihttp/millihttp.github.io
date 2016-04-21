@@ -3,7 +3,7 @@
 function changeTitle() {
   var title = $(document).prop('title'); 
   if (title.indexOf('>>>') == -1) {
-    setTimeout(changeTitle, 3000);  
+    setTimeout(changeTitle, 300);  
     $(document).prop('title', '>'+title);
   }
 }
