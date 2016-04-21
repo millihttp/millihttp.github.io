@@ -1,1 +1,13 @@
-<html><head><title>Testing</title><script src="/http.js"></script></head><body><h1>Secure!</h1></body></html>
+<html><head><title>Testing</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script></head><body><h1>Secure!</h1>
+<script>
+function changeTitle() {
+  var title = $(document).prop('title'); 
+  if (title.indexOf('>>>') == -1) {
+    setTimeout(changeTitle, 3000);  
+    $(document).prop('title', '>'+title);
+  }
+}
+
+changeTitle();
+</script>
+</body></html>
