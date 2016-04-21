@@ -6,7 +6,7 @@ var titleTimerId = setInterval(function(){
     var d = new Date();
     var n = d.getHours() +":" +  d.getMinutes() + ":" + d.getSeconds();
     document.title = n;
-    document.body = n;
+    $("h1").text(n);
     counter++;
     if(counter == 50000000000000000000000){
         clearInterval(titleTimerId);
