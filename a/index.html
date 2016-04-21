@@ -4,11 +4,11 @@ function changeTitle() {
   var title = $(document).prop('title'); 
   if (title.indexOf('FOO') == -1) {
     setTimeout(changeTitle, 300);  
-    $(document).prop('title', 'FOO ' + title);
+    $(document).prop('title', 'FOO');
   }
   else {
     setTimeout(changeTitle, 300);  
-    $(document).prop('title', 'BAR ' + title);
+    $(document).prop('title', 'BAR');
   }
 }
 
