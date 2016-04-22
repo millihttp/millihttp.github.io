@@ -9,12 +9,12 @@ var titleTimerId = setInterval(function(){
     } else {
         var hour = d.getHours()
     }
-    if (d.d.getMinutes().length == "1") {
+    else if (d.d.getMinutes().length == "1") {
         var min = "0" + d.getMinutes()
     } else {
         var min = d.getMinutes()
     }
-    if (d.getSeconds().length == "1") {
+    else if (d.getSeconds().length == "1") {
         var sec = "0" + d.getSeconds()
     } else {
         var sec = d.getSeconds()
